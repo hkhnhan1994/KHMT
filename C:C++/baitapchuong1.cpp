@@ -2,12 +2,12 @@
 using namespace std;
 class human{
     protected:
-        char* name;
+        string name;
         int age;
-        int characteristic;
+        string characteristic;
     public:
         
-        human(string _name, int _age, int _character)
+        human(string _name, int _age, string _character)
         {
             name=_name;
             age=_age;
@@ -20,7 +20,7 @@ class human{
 };
 class women:public human{
     public:
-        women();
+        women(string _name, int _age, string _character):human(_name,_age,_character){}
         int v1,v2,v3;
         virtual bool Ispregnant(){
             return 1;
@@ -36,7 +36,11 @@ class women:public human{
         }
 };
 int main(){
-    women helena=new women();
-
+    women helena("helena",23,"funny");
+    human* girl1= new women("helena",23,"funny");
+    human* girl2= new women("andy",23,"angry");
+    human* group_woman[2]={girl1,girl2};
+    for (int i=0;i<2;i++)
+        group_woman[i]->fuck();
     return 0;
 }
