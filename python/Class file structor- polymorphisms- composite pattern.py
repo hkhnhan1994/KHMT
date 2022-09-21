@@ -1,3 +1,7 @@
+"""
+Đề thi 2021 Đợt 2
+Câu 2
+"""
 """Add Abstract Class."""
 from abc import ABC, abstractmethod
 class entity(ABC):
