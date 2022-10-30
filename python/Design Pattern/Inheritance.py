@@ -10,7 +10,7 @@ class man(person):
     def printID(self):
         return self._id
 
-groupman:person=[]
+groupman:person
 
 groupman.append(man("N",1,10))
 groupman.append(man("Q",1,11))
